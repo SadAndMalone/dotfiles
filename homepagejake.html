@@ -1,0 +1,220 @@
+<DOCTYPE html>
+<html style="background-color:#6d6d6d">
+	<head>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Unica+One">
+		<title>Welcome, Jake.</title>
+		<style>			
+
+			h1 {
+				font-family: "Unica One", sans-serif;
+				font-size: 60pt;
+				color: #f7cac9;
+				margin: 100px 0px 50px 0px;
+			}
+
+			h2 {
+				font-family: "Open Sans", sans-serif;
+				font-size: 24pt;
+				color: #92a8d1;
+			}
+
+			h3 {
+				font-family: "Unica One", sans-serif;
+				font-size: 36pt;
+				text-align: center;
+				color: #f7cac9;
+				margin: 100px 0px 50px 0px;
+			}
+
+			ul {
+				color:#f7cac9;
+			}
+
+			li {
+				list-style-type: none;
+			}
+
+			a {
+				font-family: "Open Sans", sans-serif;
+				color:#f3f4f5;
+				font-size: 16pt;
+				text-decoration: none;
+				text-align: center;
+				transition: font-size 0.5s;
+			}
+
+			div {
+				text-align: center;
+			}
+
+			/* Creating the Dropdown menus */
+			.drop {
+				border: none;
+				background:rgba(00,00,00,0);
+				height: 40px;
+				width: 125px;
+				text-align: center;
+				margin: 5px 30px 10px 30px;
+			}
+
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+
+			.dropdown-content {
+				display: none; /*Hidden until the button is hovered over.*/
+				position: absolute;
+				text-align: center;
+				width: 90%;
+				overflow: hidden;
+				background: rgba(00,00,00,0);
+				transition: color 1s;
+			}
+
+			.dropdown-content a:hover {
+				font-size: 18pt;
+			}
+
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<h1><center>Hello, Jake.</center></h1>
+		<h3 id="date"><center></center></h3>
+
+		<center>	
+			<div class="dropdown">
+				<button class="drop">
+					<h2>Social</h2>
+				</button>
+				<div class="dropdown-content">
+					<ul>		
+						<li><a href="https://www.reddit.com/">Reddit</a>
+						<li><a href="https://www.tumblr.com/">Tumblr</a>
+						<li><a href="https://www.youtube.com/">YouTube</a>
+						<li><a href="https://www.facebook.com/">Facebook</a>
+					</ul>
+				</div>
+			</div>
+		
+			<div class="dropdown">
+				<button class="drop">		
+					<h2>School</h2>
+				</button>
+				<div class="dropdown-content">
+					<ul>
+						<li><a href="https://blackboard.ohio.edu/">Blackboard</a>
+						<li><a href="https://catmail.ohio.edu/">E-mail</a>
+						<li><a href="https://www.ohio.edu/">University</a>
+					</ul>
+				</div>
+			</div>
+
+			<div class="dropdown">
+				<button class="drop">
+					<h2>Coding</h2>
+				</button>
+				<div class="dropdown-content">
+					<ul>
+						<li><a href="http://wiki.archlinux.org/">Arch Wiki</a>
+						<li><a href="http://www.cplusplus.com/">cplusplus</a>
+						<li><a href="https://www.tutorialspoint.com/assembly_programming/">Assembly</a>
+					</ul>
+				</div>
+			</div>
+		
+			<div class="dropdown">
+				<button class="drop">
+					<h2>Other</h2>
+				</button>
+				<div class="dropdown-content">
+					<ul>
+						<li><a href="https://www.amazon.com/">Amazon</a>
+						<li><a href="http://www.tcgplayer.com/">TCG Player</a>
+						<li><a href="https://www.ultimateguitar.com/">Ultimate Guitar</a>
+					</ul>
+				</div>
+			</div>
+		</center>
+</body>
+<script type="text/JavaScript">
+	function today(){
+		var today = new Date();
+		var w = today.getDay();
+		var dd = today.getDate();
+		var mm = today.getMonth();
+		var yyyy = today.getFullYear();
+
+		if (dd<10)
+			dd = "0" + dd;
+		
+		if(mm == 0){
+			mm = "January";
+		}
+		else if(mm == 1){
+			mm = "February";
+		}
+		else if(mm == 2){
+			mm = "March";
+		}
+		else if(mm == 3){
+			mm = "April";
+		}
+		else if(mm == 4){
+			mm = "May";
+		}
+		else if(mm == 5){
+			mm = "June";
+		}
+		else if(mm == 6){
+			mm = "July";
+		}
+		else if(mm == 7){
+			mm = "August";
+		}
+		else if(mm == 8){
+			mm = "September";
+		}
+		else if(mm == 9){
+			mm = "October";
+		}
+		else if(mm == 10){
+			mm = "November";
+		}
+		else if(mm == 11){
+			mm = "December";
+		}
+
+		if(w == 0){
+			w = "Sunday";
+		}
+		else if(w == 1){
+			w = "Monday";
+		}
+		else if(w == 2){
+			w = "Tuesday";
+		}
+		else if(w == 3){
+			w = "Wednesday";
+		}
+		else if(w == 4){
+			w = "Thursday";
+		}
+		else if(w == 5){
+			w = "Friday";
+		}
+		else if(w == 6){
+			w = "Saturday"
+		}
+		today = w + ", " + dd + " " +  mm + ", " + yyyy;
+
+		document.getElementById("date").innerHTML = "Today is " + today;
+	}
+	window.onload = today;
+</script>
+</html>
