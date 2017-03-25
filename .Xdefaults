@@ -20,7 +20,7 @@ Xft*hinting:            full
  *.color8:       #373b41
 
  ! red
- *.color1:       #85677b
+ *.color1:       #ff0000
  *.color9:       #c597d7
 
  ! green
